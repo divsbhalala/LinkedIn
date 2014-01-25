@@ -43,10 +43,10 @@ if (isset($_GET['authenticate']) && ($_GET['authenticate'] === 'initiate'))
 
 	if (!$user)
 	{
+		session_destroy();
 		?>
 		<p><span class="label label-danger">Error</span> (např.: 401 Unauthorized ap.)</p>
 		<?php
-		session_destroy();
 	}
 	else
 	{
